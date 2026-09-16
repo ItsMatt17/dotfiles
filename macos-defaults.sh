@@ -1,0 +1,6 @@
+
+# Accent characters on button press
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+defaults write com.jetbrains.intellij ApplePressAndHoldEnabled -bool false # IntelliJ Ultimate 
+defaults write com.jetbrains.intellij.ce AepplePressAndHoldEnabled -bool false # IntelliJ Community
+

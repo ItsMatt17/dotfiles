@@ -1,0 +1,5 @@
+[user]
+	name = Matthew Payne
+	email = mattspycrafter@gmail.com
+[core]
+	editor = nvim
