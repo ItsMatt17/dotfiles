@@ -40,7 +40,7 @@ alias vim="nvim"
 export NVM_DIR="$HOME/.nvm"
 
 
-# Lazily
+# Lazily Load nvm (its ultra super mega slow)
 function _lazy_nvm() { 
     unset nvm node npm npx node
     [ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && \. "$(brew --prefix)/opt/nvm/nvm.sh"
