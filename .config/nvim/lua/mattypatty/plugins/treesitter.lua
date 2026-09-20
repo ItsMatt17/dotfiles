@@ -24,6 +24,7 @@ local filetypes = {
   "python",
   "java",
   "c",
+  "h",
   "json",
   "astro",
   "http",
