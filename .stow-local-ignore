@@ -1,7 +1,6 @@
-\.git
-\.gitignore
+.git/
 
-^/.DS_Store
-macos-defaults.sh
+.DS_Store
+.macos
 
-^\README.*
+README.*
