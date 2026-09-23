@@ -16,17 +16,8 @@ local servers = {
 return {
   "neovim/nvim-lspconfig",
   dependencies = {
-
-    {
-      "mason-org/mason.nvim",
-      opts = {},
-    },
-
-    {
-      "mason-org/mason-lspconfig.nvim",
-      opts = { ensure_installed = servers },
-    },
-
+    { "mason-org/mason.nvim",           opts = {} },
+    { "mason-org/mason-lspconfig.nvim", opts = { ensure_installed = servers } },
     {
       "nvim-java/nvim-java",
       config = function()
