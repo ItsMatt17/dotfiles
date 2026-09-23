@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 
 # Accent characters on button press
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
