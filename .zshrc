@@ -1,5 +1,18 @@
 PROMPT='%F{blue}%B%~%b%f %F{green}❯%f '
 
+
+zmodload zsh/complist
+autoload -U compinit && compinit
+autoload -U colors && colors 
+# autoload -U tetris && tetris 
+
+
+zstyle ':completion:*' menu no 
+zstyle ':completion:*' special-dirs true # force . and .. to show in cmp menu
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS} ma=0\;33 # colorize cmp menu
+# zstyle ':completion:*' file-list true # more detailed list
+zstyle ':completion:*' squeeze-slashes false # explicit disable to allow /*/ expansion
+
 HISTFILE=~/.zsh_history
 SAVEHIST=5000
 HISTSIZE=5000
@@ -7,7 +20,6 @@ HISTSIZE=5000
 setopt AUTO_CD # cd w/o filename
 setopt APPEND_HISTORY # Append history 
 setopt INC_APPEND_HISTORY # Append as typed history 
-
 setopt NO_CASE_GLOB # Globs ignore case
 
 setopt HIST_IGNORE_DUPS # Don't store duplicates
@@ -16,26 +28,11 @@ setopt HIST_REDUCE_BLANKS # Don't store blank lines
 setopt CORRECT # Spelling correct for commands (may cause error see docs)
 setopt CORRECT_ALL
 
-# Utils 
-alias path='echo -e ${PATH//:/\\n}'
-alias ls='ls --color=auto'
-alias lsa='ls -A'
-alias grep='grep --color=auto'
-alias mv='mv -i'
-alias ..='cd ..'
-alias ~='cd ~'
-alias diff='diff --color=auto'
+setopt NO_BEEP # BEST SETTING EVER
 
-# Editor
-alias vim='nvim'
+source <(fzf --zsh)
 
-
-# Git
-alias gst='git status'
-
-alias exs="/Applications/eXist-db/bin/shutdown.sh"
-alias exl="/Applications/eXist-db/bin/startup.sh"
-
+source './.zsh/aliases.zsh'
 
 export NVM_DIR="$HOME/.nvm"
 
