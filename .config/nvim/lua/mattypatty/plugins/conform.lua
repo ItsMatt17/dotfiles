@@ -1,10 +1,16 @@
 return {
-  'stevearc/conform.nvim',
+  "stevearc/conform.nvim",
   opts = {
     formatters_by_ft = {
-      lua = { 'stylua' },
-      python = { 'black', 'isort' },
-      javascript = { 'prettierd', 'prettier', lsp_format = 'fallback' },
+      lua = { "stylua" },
+      python = { "black", "isort" },
+      javascript = { "prettierd", "prettier", lsp_format = "fallback" },
+      c = { "clang_format" },
+    },
+    formatters = {
+      clang_format = {
+        prepend_args = { "--style=file", "--fallback-style=LLVM" },
+      },
     },
 
     default_format_opts = {
