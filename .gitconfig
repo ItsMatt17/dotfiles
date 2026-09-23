@@ -3,6 +3,7 @@
 	email = mattspycrafter@gmail.com
 
 [core]
+  excludesfiles = ~/.gitignore
 	editor = nvim
 
 [pull]
@@ -10,3 +11,5 @@
 
 [color]
   ui = true
+
+
