@@ -32,7 +32,7 @@ setopt NO_BEEP # BEST SETTING EVER
 
 source <(fzf --zsh)
 
-source './.zsh/aliases.zsh'
+source ~/.zsh/aliases.zsh
 
 export NVM_DIR="$HOME/.nvm"
 
