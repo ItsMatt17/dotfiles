@@ -1,5 +1,4 @@
-# Development kit for the Java programming language
-brew "openjdk"
+# Development kit for the Java programming language brew "openjdk"
 # Light-weight XML database and XPath/XQuery processor
 brew "basex"
 # Clone of cat(1) with syntax highlighting and Git integration

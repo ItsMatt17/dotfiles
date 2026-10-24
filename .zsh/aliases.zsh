@@ -28,9 +28,12 @@ alias cb='pbcopy'
 # Editor
 alias vim='nvim'
 
+# zsh 
+alias reload!='source ~/.zsh'
 
 # Git
 alias gst='git status'
+alias lg='lazygit'
 
 # alias exs="/Applications/eXist-db/bin/shutdown.sh"
 alias exl="/Applications/eXist-db/bin/startup.sh"

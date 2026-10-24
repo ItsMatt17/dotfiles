@@ -12,4 +12,9 @@
 [color]
   ui = true
 
+[commit]
+  gpqsign = true
+
+[user]
+  signingkey = ~/.ssh/id_ed25519.pub
 

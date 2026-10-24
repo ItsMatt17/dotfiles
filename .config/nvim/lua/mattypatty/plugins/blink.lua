@@ -3,8 +3,20 @@ return {
   dependencies = { "rafamadriz/friendly-snippets" },
   version = "1.*",
   opts = {
-    keymap = { preset = "super-tab" },
+    sources = {
+      per_filetype = {
+        org = { "orgmode" },
+      },
 
+      providers = {
+        orgmode = {
+          name = "Orgmode",
+          module = "orgmode.org.autocompletion.blink",
+          fallbacks = { "buffer" },
+        },
+      },
+    },
+    keymap = { preset = "super-tab" },
     appearance = {
       nerd_font_variant = "mono",
       use_nvim_cmp_as_default = true,

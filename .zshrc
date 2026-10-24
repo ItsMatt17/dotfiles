@@ -25,8 +25,8 @@ setopt NO_CASE_GLOB # Globs ignore case
 setopt HIST_IGNORE_DUPS # Don't store duplicates
 setopt HIST_REDUCE_BLANKS # Don't store blank lines
 
-setopt CORRECT # Spelling correct for commands (may cause error see docs)
-setopt CORRECT_ALL
+# setopt CORRECT # Spelling correct for commands (may cause error see docs)
+# setopt CORRECT_ALL
 
 setopt NO_BEEP # BEST SETTING EVER
 
@@ -35,6 +35,7 @@ source <(fzf --zsh)
 source ~/.zsh/aliases.zsh
 
 export NVM_DIR="$HOME/.nvm"
+export MANPAGER="nvim +Man!"
 
 # OCaml's opam
 [[ ! -r '/Users/mpayne/.opam/opam-init/init.zsh' ]] || source '/Users/mpayne/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
@@ -55,4 +56,4 @@ function npx() { _lazy_nvm; npx $@ }
 function nvim() { [[ -n $* ]] && command nvim $@ || command nvim . }
 
 
-
+eval "$(zoxide init zsh)"

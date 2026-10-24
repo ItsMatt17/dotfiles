@@ -12,6 +12,6 @@ return {
     usePlaceholders = true,
     completeUnimported = true,
     clangdFileStatus = true,
-    fallbackFlags = { "--std=c99" },
+    fallbackFlags = { "-xc", "-std=c99" },
   },
 }
