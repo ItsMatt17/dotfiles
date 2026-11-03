@@ -1,4 +1,4 @@
-local servers = {
+local ensure_installed = {
   "lua_ls",
   "vtsls",
   "pyright",
@@ -13,11 +13,27 @@ local servers = {
   "yamlls",
 }
 
+local ensure_loaded = {
+  "lua_ls",
+  "vtsls",
+  "pyright",
+  "html",
+  "cssls",
+  "clangd",
+  "eslint",
+  "tailwindcss",
+  "astro",
+  "ocamllsp",
+  "jsonls",
+  "yamlls",
+  "racket_langserver",
+}
+
 return {
   "neovim/nvim-lspconfig",
   dependencies = {
     { "mason-org/mason.nvim",           opts = {} },
-    { "mason-org/mason-lspconfig.nvim", opts = { ensure_installed = servers } },
+    { "mason-org/mason-lspconfig.nvim", opts = { ensure_installed = ensure_installed } },
     {
       "nvim-java/nvim-java",
       config = function()
@@ -29,7 +45,7 @@ return {
     local capabilities = require("blink.cmp").get_lsp_capabilities()
 
     vim.lsp.config("*", { capabilities = capabilities })
-    vim.lsp.enable(servers)
+    vim.lsp.enable(ensure_loaded)
     vim.lsp.enable("jdtls")
 
     vim.api.nvim_create_autocmd("LspAttach", {
