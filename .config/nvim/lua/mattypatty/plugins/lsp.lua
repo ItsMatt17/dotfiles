@@ -1,18 +1,4 @@
-local ensure_installed = {
-  "lua_ls",
-  "vtsls",
-  "pyright",
-  "html",
-  "cssls",
-  "clangd",
-  "eslint",
-  "tailwindcss",
-  "astro",
-  "ocamllsp",
-  "jsonls",
-  "yamlls",
-}
-
+local ensure_installed = 
 local ensure_loaded = {
   "lua_ls",
   "vtsls",
@@ -33,7 +19,24 @@ return {
   "neovim/nvim-lspconfig",
   dependencies = {
     { "mason-org/mason.nvim",           opts = {} },
-    { "mason-org/mason-lspconfig.nvim", opts = { ensure_installed = ensure_installed } },
+    { "mason-org/mason-lspconfig.nvim", opts = { ensure_installed = {
+  "lua_ls",
+  "vtsls",
+  "pyright",
+  "html",
+  "cssls",
+  "clangd",
+  "eslint",
+  "tailwindcss",
+  "astro",
+  "ocamllsp",
+  "jsonls",
+  "yamlls",
+},
+ },
+ },
+
+ 
     {
       "nvim-java/nvim-java",
       config = function()
